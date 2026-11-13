@@ -1,0 +1,14 @@
+name: Tenetx Slack capability audit
+on:
+  push:
+    branches:
+      - TX1019-0853-branch
+  workflow_dispatch:
+permissions: {}
+jobs:
+  marker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Print synthetic marker
+        run: printf '%s\n' 'TENETX_SLACK_AUDIT_20261113_CI'
